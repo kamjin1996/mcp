@@ -1,8 +1,12 @@
-# Introduction
-This script is a multi-file copying tool that allows you to copy files from a specified list of source files to multiple target directories. It supports using the -s/--sources parameter to specify the list of source files and the -t/--targets parameter to specify the list of target directories. Additionally, the -f/--force parameter enables force copying, which means existing files in the target directories will be overwritten. The script also provides a -h/--help parameter to display usage help information. During the copying process, the script checks the existence of files and directories, and it provides user-friendly error messages and logging output.
+# mcp.sh - Multi-File Copying Tool
+**`mcp.sh`** is a command-line shell script designed to simplify the process of copying multiple files to multiple target directories. It provides an easy-to-use interface for copying files in bulk, allowing users to specify source files and target directories as arguments.
 
 # Usage
-<code>chmod +x 755 mcp.sh</code>
-<br>then:<br>
-<code>./mcp.sh -s text* -t dir1 dir2<br>
-./mcp.sh -s text1 text2 ../text3 -t dir1 dir2</code>
+`./mcp.sh -s file1 file2 file3 -t dir1 dir2 [-f/--force] [-h/--help]`
+# Options
+- -s, --sources: Specify the source files to be copied.
+- -t, --targets: Specify the target directories to copy files into.
+- -f, --force: Force copy mode, overwrite destination files if they exist.
+- -h, --help: Display help information about using the script.
+
+**`mcp.sh`** performs checks for file existence and target directory validity to ensure a smooth copying process. It provides informative error messages and logs any issues encountered during the copy operation. The script aims to be versatile, user-friendly, and efficient for handling file copying tasks involving multiple sources and targets.
